@@ -1,0 +1,17 @@
+
+title: "Keystone Inquirer"
+description: "Pennsylvania-centric international news — updates, analysis, and weekly episodes."
+url: "https://<your-username>.github.io"
+baseurl: ""
+theme: null
+markdown: kramdown
+kramdown:
+  input: GFM
+collections:
+  episodes:
+    output: true
+    permalink: /episodes/:title/
+defaults:
+  - scope: {path: "", type: "episodes"}
+    values: {layout: post}
+plugins: []
