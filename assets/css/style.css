@@ -5,9 +5,11 @@
 *{box-sizing:border-box}
 body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.55}
 body{
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cpath d='M20 18 h40 l-6 14 v20 h-28 v-20 z' fill='white' fill-opacity='0.05'/%3E%3C/svg%3E");
-  background-size:80px 80px;
-  background-repeat:repeat;
+  /* darken the image a bit so content pops */
+  background: linear-gradient(rgba(7,12,24,0.75), rgba(7,12,24,0.75)),
+              url("/assets/img/keystone_tile_wide.png") repeat;
+  background-size: 180px auto;   /* tweak tile size to your taste */
+  background-color: #0b1220;     /* fallback color */
 }
 a{color:var(--accent);text-decoration:none}
 a:hover{text-decoration:underline}
