@@ -38,3 +38,14 @@ a:hover{text-decoration:underline}
 .banner{display:flex;align-items:center;gap:18px}
 .banner .logo-large{height:64px;width:auto;border-radius:12px}
 .banner .title{margin:0}
+
+@media (max-width: 640px) {
+  .container { padding: 14px; }
+  .nav { flex-wrap: wrap; gap: 10px; }
+  .brand .wordmark { display: none; }      /* keep only the logo on small screens */
+  .menu a { margin-left: 12px; font-size: 14px; }
+  .banner .logo-large { height: 48px; }    /* smaller hero logo */
+  .card { padding: 14px; }
+  .grid.cols-2 { grid-template-columns: 1fr; }  /* force one column */
+  .title { font-size: 1.4rem; line-height: 1.2; }
+}
