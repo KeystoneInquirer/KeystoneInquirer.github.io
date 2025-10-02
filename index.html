@@ -12,7 +12,7 @@ title: Keystone Inquirer
 </section>
 
 
-<section class="card" style="margin-top:18px;">
+<section class="card" style="margin-top:18px;" id="live-updates">
   <h2>Live Updates — @PAInquirer</h2>
 
   <!-- Official X/Twitter timeline (auto-updates) -->
@@ -26,6 +26,29 @@ title: Keystone Inquirer
     Tweets by PAInquirer
   </a>
 </section>
+
+<!-- Force-load the widget script and render the timeline in #live-updates -->
+<script>
+(function () {
+  function renderTimeline() {
+    var el = document.getElementById('live-updates');
+    if (window.twttr && window.twttr.widgets && el) {
+      window.twttr.widgets.load(el);
+    }
+  }
+  // If the widgets.js script isn't present, inject it; otherwise just render.
+  if (!window.twttr || !window.twttr.widgets) {
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://platform.twitter.com/widgets.js';
+    s.charset = 'utf-8';
+    s.onload = renderTimeline;
+    (document.body || document.documentElement).appendChild(s);
+  } else {
+    renderTimeline();
+  }
+})();
+</script>
 
 
 
