@@ -25,30 +25,11 @@ title: Keystone Inquirer
      href="https://twitter.com/PAInquirer?ref_src=twsrc%5Etfw">
     Tweets by PAInquirer
   </a>
+
+  <!-- Keep the script right here to avoid layout issues -->
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </section>
 
-<!-- Force-load the widget script and render the timeline in #live-updates -->
-<script>
-(function () {
-  function renderTimeline() {
-    var el = document.getElementById('live-updates');
-    if (window.twttr && window.twttr.widgets && el) {
-      window.twttr.widgets.load(el);
-    }
-  }
-  // If the widgets.js script isn't present, inject it; otherwise just render.
-  if (!window.twttr || !window.twttr.widgets) {
-    var s = document.createElement('script');
-    s.async = true;
-    s.src = 'https://platform.twitter.com/widgets.js';
-    s.charset = 'utf-8';
-    s.onload = renderTimeline;
-    (document.body || document.documentElement).appendChild(s);
-  } else {
-    renderTimeline();
-  }
-})();
-</script>
 
 
 
