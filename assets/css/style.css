@@ -65,3 +65,13 @@ a:hover{text-decoration:underline}
   margin-top: 10px;   /* move it down; try 12–14px if you want more space */
   line-height: 1.35;  /* improves readability on small screens */
 }
+/* Make the embed fluid/full width */
+.timeline-wrap { width: 100%; }
+.timeline-wrap .twitter-timeline { width: 100% !important; }
+
+/* Tweak height on small screens */
+@media (max-width: 640px) {
+  .timeline-wrap .twitter-timeline {
+    min-height: 560px; /* adjust if you want more/less */
+  }
+}
