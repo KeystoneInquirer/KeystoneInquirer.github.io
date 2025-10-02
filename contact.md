@@ -1,4 +1,3 @@
-
 ---
 layout: page
 title: Sponsor / Collaborate
