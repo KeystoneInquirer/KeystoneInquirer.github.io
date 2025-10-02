@@ -57,3 +57,11 @@ a:hover{text-decoration:underline}
   .grid.cols-2 { grid-template-columns: 1fr; }  /* force one column */
   .title { font-size: 1.4rem; line-height: 1.2; }
 }
+
+/* --- Adjust hero spacing --- */
+.banner .title { margin: 0; }
+.banner .meta {
+  display: block;
+  margin-top: 10px;   /* move it down; try 12–14px if you want more space */
+  line-height: 1.35;  /* improves readability on small screens */
+}
