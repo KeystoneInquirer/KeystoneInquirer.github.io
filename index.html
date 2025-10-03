@@ -15,38 +15,17 @@ title: Keystone Inquirer
 <section class="card" style="margin-top:18px;">
   <h2>Live Updates — @PAInquirer</h2>
 
-  <div id="ki-timeline"></div>
+  <!-- minimal, supported Search timeline (no API keys) -->
+  <a class="twitter-timeline"
+     data-theme="dark"
+     data-chrome="noheader nofooter noborders transparent"
+     data-height="700"
+     href="https://twitter.com/search?q=from%3APAInquirer%20-filter%3Areplies%20-filter%3Aretweets">
+    Tweets from @PAInquirer
+  </a>
 
-  <!-- Load the widget script once -->
+  <!-- one script, here only -->
   <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-  <!-- Programmatically create a LIVE Search timeline (auto-updates, no API keys) -->
-  <script>
-    (function createKiTimeline() {
-      var mount = document.getElementById('ki-timeline');
-      if (!mount) return;
-
-      function ready(fn) {
-        if (window.twttr && twttr.widgets) return fn();
-        setTimeout(function(){ ready(fn); }, 80);
-      }
-
-      ready(function () {
-        twttr.widgets.createTimeline(
-          {
-            sourceType: 'url',
-            url: 'https://twitter.com/search?q=from%3APAInquirer%20-filter%3Areplies%20-filter%3Aretweets&f=live'
-          },
-          mount,
-          {
-            theme: 'dark',
-            chrome: 'noheader nofooter noborders transparent',
-            height: 700
-          }
-        ).catch(function(err){ console && console.error('X timeline error:', err); });
-      });
-    })();
-  </script>
 </section>
 
 
