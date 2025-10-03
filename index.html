@@ -15,18 +15,16 @@ title: Keystone Inquirer
 <section class="card" style="margin-top:18px;">
   <h2>Live Updates — @PAInquirer</h2>
 
-  <!-- minimal, supported Search timeline (no API keys) -->
-  <a class="twitter-timeline"
-     data-theme="dark"
-     data-chrome="noheader nofooter noborders transparent"
-     data-height="700"
-     href="https://twitter.com/search?q=from%3APAInquirer%20-filter%3Areplies%20-filter%3Aretweets">
-    Tweets from @PAInquirer
-  </a>
+<a class="twitter-timeline"
+   data-theme="dark"
+   data-chrome="noheader nofooter noborders transparent"
+   data-height="700"
+   href="https://twitter.com/search?q=from%3APAInquirer%20-filter%3Areplies%20-filter%3Aretweets&f=live">
+  Tweets from @PAInquirer
+</a>
 
-  <!-- one script, here only -->
-  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-</section>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<script>window.addEventListener('error', e => { if (e.message.includes('twttr')) console.error('X widget error:', e); });</script>
 
 
 
