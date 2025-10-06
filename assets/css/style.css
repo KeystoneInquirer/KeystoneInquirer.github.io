@@ -48,7 +48,7 @@ a:hover{text-decoration:underline}
 
 @media (max-width: 640px) {
   .container { padding: 14px; }
-  .nav { flex-wrap: wrap; gap: 10px; }
+  /* Removed flex-wrap to avoid conflict with toggle */
   .brand .wordmark { display: none; }      /* keep only the logo on small screens */
   .menu a { margin-left: 12px; font-size: 14px; }
   .banner .logo-large { height: 48px; }    /* smaller hero logo */
