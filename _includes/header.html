@@ -4,26 +4,25 @@
       <img src="{{ '/assets/img/keystone-whitebg.jpg' | relative_url }}" alt="Keystone Inquirer" class="logo">
       <span class="wordmark">Keystone Inquirer</span>
     </a>
-    <button class="menu-toggle" aria-label="Toggle Menu" onclick="toggleMenu()">
-      <span></span>
-      <span></span>
-      <span></span>
+
+    <!-- Mobile menu toggle button -->
+    <button id="menu-toggle"
+            class="menu-toggle"
+            aria-controls="site-menu"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
     </button>
-    <div id="mobile-menu" class="menu">
+
+    <!-- Primary navigation links -->
+    <nav id="site-menu" class="menu">
       <a href="{{ '/' | relative_url }}">Home</a>
       <a href="{{ '/mission' | relative_url }}">Mission</a>
       <a href="{{ '/founder' | relative_url }}">Meet the Founder</a>
       <a href="{{ '/episodes' | relative_url }}">Episodes</a>
       <a href="{{ '/contact' | relative_url }}">Sponsor/Collaborate</a>
-    </div>
+    </nav>
   </div>
 </header>
-
-<script>
-function toggleMenu() {
-  var menu = document.getElementById('mobile-menu');
-  var button = document.querySelector('.menu-toggle');
-  menu.classList.toggle('active');
-  button.classList.toggle('active');
-}
-</script>
